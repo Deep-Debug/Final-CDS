@@ -130,7 +130,8 @@
             <h1>Recommend Hospitals</h1>
             <ul>
             {% for rs in rs %}
-                <li><a href="{{ws.0}}">{{rs}}</a></li>
+                {% comment %} <li><a href="{{ws.0}}">{{rs}}</a></li> {% endcomment %}
+                <li>{{rs}}</li>
             {% endfor %}
             </ul>
         </div>

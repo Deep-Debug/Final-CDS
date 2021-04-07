@@ -56,7 +56,7 @@ def detect(request):
       city = lab.city
       rs = Hospital.objects.get(city=city).hospital
       ws = Hospital.objects.get(city=city).website
-      rs = rs.split(", ")
+      rs = rs.split("$ ")
       ws = ws.split(", ")
       
       context = {
@@ -171,6 +171,7 @@ def feedback(request):
 
 
         feedback_form.save()
+        return redirect('home')
 
 
     return render(request,'feedback.html')

@@ -34,7 +34,7 @@ class generatereport(models.Model):
 
 class Hospital(models.Model):
     city = models.CharField(max_length=30)
-    hospital = models.CharField(max_length=500)
+    hospital = models.CharField(max_length=1000)
     website = models.CharField(max_length=500)
     class Meta: 
         db_table = "Hospital"  
